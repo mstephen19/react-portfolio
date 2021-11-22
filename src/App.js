@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import NavContainer from './NavBar/NavContainer';
 import Home from './Pages/Home';
 import Projects from './Pages/Projects';
@@ -23,8 +23,13 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    document.title = `Matt Stephens - ${currentPage}`;
+  }, [currentPage]);
+
   const handleNav = (label) => {
     setPage(label);
+    localStorage.setItem('curr', JSON.stringify(currentPage));
   };
 
   return (

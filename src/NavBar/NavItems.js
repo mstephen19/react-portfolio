@@ -19,6 +19,7 @@ export default function NavItems() {
     left: 0,
     right: 0,
     background: '#424242',
+    height: '50px',
   };
 
   const buttonStyle = {

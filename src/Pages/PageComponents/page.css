@@ -1,0 +1,21 @@
+.come-in {
+  position: absolute;
+  overflow-y: scroll;
+  -webkit-animation: slide 0.5s forwards;
+  animation: slide 0.5s forwards;
+  height: auto;
+}
+
+.overflow {
+  overflow-y: scroll;
+}
+
+@keyframes slide {
+  0% {
+    left: -100vw;
+    transform: scale(0.75);
+  }
+  100% {
+    left: 0;
+  }
+}

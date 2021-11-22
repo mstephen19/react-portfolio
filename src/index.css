@@ -1,6 +1,21 @@
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  touch-action: manipulation;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
 html,
-body {
+body,
+#root {
   margin: 0;
   padding: 0;
   background: #212121;
+  color: white;
+  height: 100vh;
 }

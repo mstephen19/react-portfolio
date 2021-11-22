@@ -6,7 +6,13 @@ import {
   faProjectDiagram,
   faEnvelope,
   faFile,
+  faLink,
 } from '@fortawesome/free-solid-svg-icons';
+import {
+  faGithub,
+  faLinkedin,
+  faStackOverflow,
+} from '@fortawesome/free-brands-svg-icons';
 
 export function Home() {
   return <FontAwesomeIcon icon={faHome} />;
@@ -26,4 +32,20 @@ export function Contact() {
 
 export function File() {
   return <FontAwesomeIcon icon={faFile} />;
+}
+
+export function Link() {
+  return <FontAwesomeIcon icon={faLink} />;
+}
+
+export function Github() {
+  return <FontAwesomeIcon icon={faGithub} />;
+}
+
+export function Linkedin() {
+  return <FontAwesomeIcon icon={faLinkedin} />;
+}
+
+export function StackOverflow() {
+  return <FontAwesomeIcon icon={faStackOverflow} />;
 }

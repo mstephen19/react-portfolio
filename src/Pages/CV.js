@@ -1,9 +1,6 @@
-import React from 'react'
+import React from 'react';
+import Page from './PageComponents/Page';
 
 export default function CV() {
-  return (
-    <div>
-      CV page
-    </div>
-  )
+  return <Page head='My CV/Resume' comeIn></Page>;
 }

@@ -1,9 +1,6 @@
-import React from 'react'
+import React from 'react';
+import Page from './PageComponents/Page';
 
 export default function Contact() {
-  return (
-    <div>
-      Contact page
-    </div>
-  )
+  return <Page head='Contact Me' comeIn></Page>;
 }
