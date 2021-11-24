@@ -13,6 +13,7 @@ export default function PageContainer(props) {
         height: '100vh',
         width: '100vw',
         textAlign: 'center',
+        marginTop: '50px',
       }}
       className={props.comeIn && 'come-in'}
     >
