@@ -1,6 +1,6 @@
 # [Matt Stephens Portfolio](https://mstephen19.github.io/react-portfolio)
 
-A portfolio built entirely in React, utilizing state, context, and props.
+A portfolio built entirely in React, utilizing state, context, and props. Users can read some general information about myself, see some of my recent projects, contact me, and download my CV while reading up on my technical skills.
 
 This site is responsive, and has been tested on various screen sizes and mobile devices.
 
@@ -18,24 +18,25 @@ This site is responsive, and has been tested on various screen sizes and mobile 
 
 ## Notable Features
 
-### Language Toggle
+### Page switching using context
 
 ```JavaScript
-// App.js
-export const LangContext = createContext();
+// NavItems.js
+const { handleNav } = useContext(PageContext);
 
-// Inside App component
-const [lang, setLang] = useState('en');
-const toggleLang = () => {
-  setLang((prevLang) => (prevLang === 'en' ? 'ru' : 'en'));
-  lang === 'en'
-    ? document.querySelector('html').setAttribute('lang', 'en')
-    : document.querySelector('html').setAttribute('lang', 'ru');
-};
-
-return (
-  <LangToggle onClick={toggleLang} />
-)
+<BottomNavigation sx={mainStyle} showLabels value={'Cool'}>
+  {navItems.map(({ label, icon }) => {
+    return (
+      <BottomNavigationAction
+        label={label}
+        icon={icon}
+        sx={label === selected ? selectedStyle : buttonStyle}
+        onClick={() => handleClick(label)}
+        key={uuidv4()}
+      />
+    );
+  })}
+</BottomNavigation>
 ```
 
 ### Responsive widths and font sizes using clamp()
@@ -54,7 +55,7 @@ textarea {
 
 ## Live deployed link
 
-- [Check out the site here](https://mstephen19.github.io/my-portfolio)
+- [Check out the site here](https://mstephen19.github.io/react-portfolio)
 
 ## Created by
 
