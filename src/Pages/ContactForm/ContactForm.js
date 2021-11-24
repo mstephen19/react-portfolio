@@ -13,6 +13,10 @@ export default function ContactForm() {
 
   const [msg, setMsg] = useState('');
 
+  const notifyRequired = ({ target }) => {
+    if (!target.value) setMsg('Please fill in all the fields');
+  };
+
   const submit = () => {
     if (name && email && message && subject) {
       const regex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
@@ -50,6 +54,7 @@ export default function ContactForm() {
         placeholder={placeholders[0]}
         value={name}
         onChange={(e) => setName(e.target.value)}
+        onMouseOut={notifyRequired}
         maxLength='50'
       />
       <input
@@ -57,6 +62,7 @@ export default function ContactForm() {
         placeholder={placeholders[1]}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        onMouseOut={notifyRequired}
         maxLength='100'
       />
       <input
@@ -64,6 +70,7 @@ export default function ContactForm() {
         placeholder={placeholders[2]}
         value={subject}
         onChange={(e) => setSubject(e.target.value)}
+        onMouseOut={notifyRequired}
         maxLength='40'
       />
       <textarea
