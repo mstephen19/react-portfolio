@@ -6,6 +6,7 @@ import charity from '../images/proj/charity-demo.gif';
 import haunted from '../images/proj/haunted-demo.gif';
 import notes from '../images/proj/notes-demo.gif';
 import omegle from '../images/proj/omegle-demo.gif';
+import ProjectsContainer from './ProjectComponents/ProjectsContainer';
 
 export default function Projects() {
   const projects = [
@@ -52,12 +53,14 @@ export default function Projects() {
   ];
   return (
     <Page head='My Projects' comeIn>
-      {projects.map(({ ...info }, i) => {
-        if (i === projects.length - 1) {
-          return <Project {...info} lastOne />;
-        }
-        return <Project {...info} />;
-      })}
+      <ProjectsContainer>
+        {projects.map(({ ...info }, i) => {
+          if (i === projects.length - 1) {
+            return <Project {...info} lastOne key={i} />;
+          }
+          return <Project {...info} key={i} />;
+        })}
+      </ProjectsContainer>
     </Page>
   );
 }

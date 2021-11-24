@@ -16,17 +16,22 @@ export default function Project({
   lastOne,
 }) {
   const cardStyles = {
-    width: '85%',
-    maxWidth: '1000px',
+    flex: '0 1 85%',
+    maxWidth: '500px',
     marginBottom: !lastOne ? '10px' : '60px',
   };
 
   return (
     <div
-      style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        flex: '0 1 85%',
+      }}
     >
       <Card sx={cardStyles}>
-        <CardMedia component='img' height='140' image={image} alt={title} />
+        <CardMedia component='img' height='250' image={image} alt={title} />
         <CardContent>
           <Typography gutterBottom variant='h5' component='div'>
             {title}

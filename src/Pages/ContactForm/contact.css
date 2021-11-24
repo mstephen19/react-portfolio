@@ -1,0 +1,32 @@
+input,
+textarea {
+  width: clamp(200px, 75%, 800px);
+  font-size: clamp(1.25rem, 5vw, 3rem);
+  background: var(--main);
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.contactContainer textarea {
+  height: 50%;
+  resize: none;
+}
+
+.emailSubmit {
+  font-size: clamp(1.25rem, 3vw, 3.25rem);
+  border: 1px solid black;
+  border-radius: 5px;
+  background: var(--text);
+  box-shadow: -3px 3px 0 black;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.emailSubmit:hover {
+  transform: scale(1.05);
+}
+
+.emailSubmit:active {
+  transform: translate(-2px, 2px);
+  box-shadow: -1px 1px 0 black;
+}

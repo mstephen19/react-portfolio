@@ -12,6 +12,7 @@ export default function PageContainer(props) {
         overflowX: 'hidden',
         height: '100vh',
         width: '100vw',
+        textAlign: 'center',
       }}
       className={props.comeIn && 'come-in'}
     >
