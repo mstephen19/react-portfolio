@@ -1,2 +1,0 @@
-.come-in{position:absolute;animation:slide .5s forwards;height:auto}.come-in,.overflow{overflow-y:scroll}@keyframes slide{0%{left:-100vw;transform:scale(.75)}to{left:0}}*{font-family:"Lucida Sans","Lucida Sans Regular","Lucida Grande","Lucida Sans Unicode",Geneva,Verdana,sans-serif;-webkit-tap-highlight-color:transparent;outline:none;touch-action:manipulation;scroll-behavior:smooth;-webkit-overflow-scrolling:touch}#root,*,body,html{margin:0;padding:0}#root,body,html{background:#212121;color:#fff;height:100vh}
-/*# sourceMappingURL=main.0c16a5e1.chunk.css.map */
