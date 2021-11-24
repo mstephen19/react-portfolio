@@ -1,9 +1,20 @@
-input,
+.contactContainer {
+  height: clamp(400px, 75%, 700px);
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.contactContainer input,
 textarea {
   width: clamp(200px, 75%, 800px);
   font-size: clamp(1.25rem, 5vw, 3rem);
   background: var(--main);
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 5px;
 }
 
@@ -13,7 +24,7 @@ textarea {
 }
 
 .emailSubmit {
-  font-size: clamp(1.25rem, 3vw, 3.25rem);
+  font-size: clamp(1.5rem, 3vw, 3.25rem);
   border: 1px solid black;
   border-radius: 5px;
   background: var(--text);

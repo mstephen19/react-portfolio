@@ -44,7 +44,7 @@ export default function ContactForm() {
   };
 
   return (
-    <>
+    <div className='contactContainer'>
       <input
         type='text'
         placeholder={placeholders[0]}
@@ -76,6 +76,6 @@ export default function ContactForm() {
         Submit
       </button>
       <span className={emailSent ? 'visiblee' : 'hiddenn'}>{msg}</span>
-    </>
+    </div>
   );
 }
